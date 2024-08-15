@@ -13,8 +13,8 @@ public class AyatDomain {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private int index;
-    @Column(columnDefinition = "TEXT")
     private String text;
     @ManyToOne
+    @JoinColumn(name="fk_surah_id")
     private SurahDomain surah;
 }

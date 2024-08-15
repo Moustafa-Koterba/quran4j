@@ -7,4 +7,5 @@ import java.util.Locale;
 
 public interface SurahService {
     List<Surah> saveAll(List<Surah> surahs, Locale locale);
+    List<Surah> patchTitleAndOrigin(List<Surah> surahs, Locale locale);
 }

@@ -10,5 +10,6 @@ import java.util.List;
 public class Surah {
     private final int index;
     private final String title;
+    private final Origin origin;
     private final List<Ayat> ayats;
 }
