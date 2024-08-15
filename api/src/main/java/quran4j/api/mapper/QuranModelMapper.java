@@ -23,7 +23,7 @@ public interface QuranModelMapper {
      */
     default Quran toModel(String language, Map<String, List<AyatDTO>> dto) {
         List<Surah> surahs = dto.entrySet().stream()
-                .map(entry -> new Surah(Integer.parseInt(entry.getKey()), null, entry.getValue().stream().map(this::ayatDTOtoModel).toList()))
+                .map(entry -> new Surah(Integer.parseInt(entry.getKey()), null, null, entry.getValue().stream().map(this::ayatDTOtoModel).toList()))
                 .toList();
         return new Quran(Locale.forLanguageTag(language), surahs);
     }
