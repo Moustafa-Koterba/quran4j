@@ -19,8 +19,14 @@ public class SurahDTORepresentationModelMapper {
     public SurahDTORepresentationModel toDTO(Surah model, Locale locale) {
         SurahDTORepresentationModel dto = new SurahDTORepresentationModel(dtoMapper.toDTO(model));
         dto.add(linkTo(methodOn(SurahController.class).findByIndexAndLocale(model.getIndex(), locale)).withSelfRel());
-        dto.add(linkTo(methodOn(SurahController.class).findByIndexAndLocale(model.getIndex() - 1, locale)).withRel("previous"));
-        dto.add(linkTo(methodOn(SurahController.class).findByIndexAndLocale(model.getIndex() + 1, locale)).withRel("next"));
+
+        if (model.getIndex() > 1) {
+            dto.add(linkTo(methodOn(SurahController.class).findByIndexAndLocale(model.getIndex() - 1, locale)).withRel("previous"));
+        }
+
+        if (model.getIndex() < 114) {
+            dto.add(linkTo(methodOn(SurahController.class).findByIndexAndLocale(model.getIndex() + 1, locale)).withRel("next"));
+        }
         return dto;
     }
 }

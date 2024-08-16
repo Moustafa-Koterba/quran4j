@@ -1,9 +1,10 @@
-package quran4j.admin.mapper;
+package quran4j.admin.surah.mapper;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import quran4j.admin.dto.AyatDTO;
-import quran4j.admin.dto.SurahDTO;
+import quran4j.admin.ayat.dto.AyatDTO;
+import quran4j.admin.ayat.mapper.AyatModelMapper;
+import quran4j.admin.surah.dto.SurahDTO;
 import quran4j.library.surah.business.model.Origin;
 import quran4j.library.surah.business.model.Surah;
 
