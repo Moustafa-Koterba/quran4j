@@ -1,8 +1,8 @@
-package quran4j.admin.mapper;
+package quran4j.admin.ayat.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import quran4j.admin.dto.AyatDTO;
+import quran4j.admin.ayat.dto.AyatDTO;
 import quran4j.library.ayat.business.model.Ayat;
 
 import java.util.List;
