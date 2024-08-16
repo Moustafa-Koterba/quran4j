@@ -1,11 +1,11 @@
-package quran4j.admin.controller;
+package quran4j.admin.surah.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import quran4j.admin.dto.AyatDTO;
-import quran4j.admin.dto.SurahDTO;
-import quran4j.admin.mapper.SurahModelMapper;
+import quran4j.admin.ayat.dto.AyatDTO;
+import quran4j.admin.surah.dto.SurahDTO;
+import quran4j.admin.surah.mapper.SurahModelMapper;
 import quran4j.library.surah.business.service.SurahService;
 
 import java.util.List;
