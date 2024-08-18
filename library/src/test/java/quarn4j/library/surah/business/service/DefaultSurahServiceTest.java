@@ -69,7 +69,7 @@ public class DefaultSurahServiceTest {
         when(modelMapper.toModel(domain)).thenReturn(model);
         when(modelMapper.toModel(domain2)).thenReturn(model2);
 
-        when(repository.findByIndexInAndLocale(any(), eq(locale))).thenReturn(domains);
+        when(repository.findByIndexInAndLanguage(any(), eq(locale))).thenReturn(domains);
         when(repository.saveAll(any())).thenReturn(domains);
 
         var surahs = service.patchTitleAndOrigin(models, locale);
@@ -85,7 +85,7 @@ public class DefaultSurahServiceTest {
         verify(modelMapper, times(1)).toModel(domain);
         verify(modelMapper, times(1)).toModel(domain2);
         verify(repository, times(1)).saveAll(domains);
-        verify(repository, times(1)).findByIndexInAndLocale(any(), eq(locale));
+        verify(repository, times(1)).findByIndexInAndLanguage(any(), eq(locale));
     }
 
     @Test
@@ -95,13 +95,13 @@ public class DefaultSurahServiceTest {
         SurahDomain domain = domain(index);
         Surah model = Surah.builder().index(index).build();
 
-        when(repository.findByIndexAndLocale(eq(index), eq(locale))).thenReturn(domain);
+        when(repository.findByIndexAndLanguage(eq(index), eq(locale))).thenReturn(domain);
         when(modelMapper.toModel(domain)).thenReturn(model);
 
         var surah = service.findByIndex(index, locale);
         assert surah.getIndex() == model.getIndex();
 
-        verify(repository, times(1)).findByIndexAndLocale(index, locale);
+        verify(repository, times(1)).findByIndexAndLanguage(index, locale);
         verify(modelMapper, times(1)).toModel(domain);
     }
 
