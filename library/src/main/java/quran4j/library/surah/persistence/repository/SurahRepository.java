@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Locale;
 
 public interface SurahRepository extends JpaRepository<SurahDomain, Integer> {
-    List<SurahDomain> findByIndexInAndLocale(List<Integer> indexes, Locale locale);
+    List<SurahDomain> findByIndexInAndLanguage(List<Integer> indexes, Locale language);
 
-    SurahDomain findByIndexAndLocale(int index, Locale locale);
+    SurahDomain findByIndexAndLanguage(int index, Locale language);
 }
