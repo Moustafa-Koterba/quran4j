@@ -10,7 +10,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="title" type="varchar(255)" />
-            <column name="locale" type="varchar(255)">
+            <column name="language" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -35,8 +35,8 @@
 
     <changeSet id="1723718439" author="mkoterba">
         <addUniqueConstraint
-                columnNames="index, locale"
-                constraintName="uc_index_locale_surah"
+                columnNames="index, language"
+                constraintName="uc_index_language_surah"
                 tableName="surah"/>
     </changeSet>
 

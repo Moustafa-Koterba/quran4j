@@ -12,7 +12,7 @@ import java.util.Locale;
 
 @Mapper(componentModel = "spring", uses = AyatDomainMapper.class)
 public interface SurahDomainMapper {
-    @Mapping(target = "locale", source = "locale")
+    @Mapping(target = "language", source = "locale")
     SurahDomain toDomain(Surah model, Locale locale);
 
     @AfterMapping

@@ -19,7 +19,7 @@ public class SurahDomain {
     private int id;
     private int index;
     private String title;
-    private Locale locale;
+    private Locale language;
     @Enumerated(EnumType.STRING)
     private Origin origin;
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "surah", cascade = CascadeType.PERSIST)

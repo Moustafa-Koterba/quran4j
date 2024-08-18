@@ -31,7 +31,7 @@ public class DefaultSurahService implements SurahService {
     @Transactional
     @Override
     public List<Surah> patchTitleAndOrigin(List<Surah> models, Locale locale) {
-        List<SurahDomain> domains = repository.findByIndexInAndLocale(models.stream().map(Surah::getIndex).toList(), locale);
+        List<SurahDomain> domains = repository.findByIndexInAndLanguage(models.stream().map(Surah::getIndex).toList(), locale);
         domains.forEach(domain -> {
             Surah surah = models.stream().filter(model -> model.getIndex() == domain.getIndex()).findFirst().orElseThrow();
             domain.setTitle(surah.getTitle());
@@ -43,6 +43,6 @@ public class DefaultSurahService implements SurahService {
 
     @Override
     public Surah findByIndex(int index, Locale locale) {
-        return modelMapper.toModel(repository.findByIndexAndLocale(index, locale));
+        return modelMapper.toModel(repository.findByIndexAndLanguage(index, locale));
     }
 }
