@@ -1,0 +1,7 @@
+name: quran4j
+runtime: java
+description: quran4j
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: java-gradle
