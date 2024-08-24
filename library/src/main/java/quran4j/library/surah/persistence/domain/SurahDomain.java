@@ -15,8 +15,9 @@ import java.util.Locale;
 @Setter
 public class SurahDomain {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "`index`") // needed since index is a mysql keyword
     private int index;
     private String title;
     private Locale language;

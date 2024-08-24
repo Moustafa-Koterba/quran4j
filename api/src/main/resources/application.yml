@@ -1,8 +1,6 @@
 spring:
   datasource:
-    username: postgres
-    password: postgres
-    url: jdbc:postgresql://localhost:5432/quran?createDatabaseIfNotExist=true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+    username: user
+    password: user
+    url: jdbc:mysql://localhost:3306/quran
+    driver-class: com.mysql.cj.jdbc.Driver
