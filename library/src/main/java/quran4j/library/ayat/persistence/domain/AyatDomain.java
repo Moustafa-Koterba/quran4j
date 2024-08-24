@@ -11,8 +11,9 @@ import quran4j.library.surah.persistence.domain.SurahDomain;
 @Setter
 public class AyatDomain {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "`index`") // needed since index is a mysql keyword
     private int index;
     private String text;
     @ManyToOne
