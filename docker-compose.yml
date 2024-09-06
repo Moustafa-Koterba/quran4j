@@ -1,0 +1,7 @@
+services:
+  admin:
+    image: quran4j/admin
+    build: ./admin
+  api:
+    image: quran4j/api
+    build: ./api
