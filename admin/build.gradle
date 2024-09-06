@@ -17,6 +17,10 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    mainClass = 'quran4j.admin.AdminApplication'
+}
+
 dependencies {
     implementation project(":library")
 
@@ -35,4 +39,8 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.named('jar') {
+    enabled = false
 }

@@ -1,6 +1,3 @@
 spring:
   datasource:
-    username: user
-    password: user
-    url: jdbc:mysql://localhost:3306/quran
     driver-class: com.mysql.cj.jdbc.Driver
