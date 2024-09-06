@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: user
+    password: user
+    url: jdbc:mysql://host.docker.internal/quran
+  jpa:
+    show-sql: true
