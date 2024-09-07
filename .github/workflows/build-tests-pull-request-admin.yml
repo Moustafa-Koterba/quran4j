@@ -5,7 +5,7 @@ on:
     types:
       - opened
     paths:
-      - 'admin/**.java'
+      - 'admin/**'
     branches:
       - dev
 
