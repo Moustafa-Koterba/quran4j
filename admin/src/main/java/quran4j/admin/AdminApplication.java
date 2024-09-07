@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackages = "quran4j.library")
 public class AdminApplication {
 	public static void main(String[] args) {
-		System.out.println("Hello world 4");
+		System.out.println("Hello world 5");
 		SpringApplication.run(AdminApplication.class, args);
 	}
 }
