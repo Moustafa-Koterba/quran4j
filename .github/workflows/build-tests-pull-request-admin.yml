@@ -1,12 +1,7 @@
 name: Build and tests on admin for pull request
 
 on:
-  push:
-    paths:
-      - 'admin/**'
   pull_request:
-    types:
-      - opened
     paths:
       - 'admin/**'
     branches:
