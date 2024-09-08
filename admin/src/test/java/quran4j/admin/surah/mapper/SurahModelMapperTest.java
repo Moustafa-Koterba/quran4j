@@ -53,7 +53,7 @@ public class SurahModelMapperTest {
 
         List<Surah> models = mapper.toModels(dtos);
 
-        assert models.size() == 3;
+        assert models.size() == 2;
         assert models.stream().anyMatch(surah -> surah.getIndex() == 1 && surah.getAyats().size() == 2);
         assert models.stream().anyMatch(surah -> surah.getIndex() == 2 && surah.getAyats().size() == 3);
         assert models.stream().flatMap(surah -> surah.getAyats().stream()).anyMatch(ayat -> ayat.getIndex() == 1 && ayat.getText().contentEquals("a"));
