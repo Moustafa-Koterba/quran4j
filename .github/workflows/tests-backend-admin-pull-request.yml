@@ -1,4 +1,5 @@
 name: Tests backend admin
+run-name: Tests backend on admin by @${{ github.actor }}
 
 on:
   pull_request:
@@ -8,7 +9,7 @@ on:
       - dev
 
 jobs:
-  build:
+  tests-backend-admin:
     runs-on: ubuntu-latest
     permissions:
       contents: read
