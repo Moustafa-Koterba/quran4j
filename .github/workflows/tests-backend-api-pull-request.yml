@@ -1,4 +1,4 @@
-name: Tests backend admin
+name: Tests backend api
 run-name: Tests backend on api by @${{ github.actor }}
 
 on:
@@ -9,7 +9,7 @@ on:
       - dev
 
 jobs:
-  tests-backend-admin:
+  tests-backend-api:
     runs-on: ubuntu-latest
     permissions:
       contents: read
