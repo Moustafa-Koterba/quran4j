@@ -1,4 +1,4 @@
-name: Build and tests on admin for pull request
+name: Tests backend admin
 
 on:
   pull_request:
@@ -28,9 +28,6 @@ jobs:
 
       - name: Make gradlew executable
         run: chmod +x gradlew
-
-      - name: Build with Gradle Wrapper
-        run: ./gradlew :admin:build
 
       - name: Tests with Gradle Wrapper
         run: ./gradlew :admin:test
