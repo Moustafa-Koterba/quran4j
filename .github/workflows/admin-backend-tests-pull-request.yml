@@ -1,15 +1,14 @@
-name: Tests backend api
-run-name: Tests backend on api by @${{ github.actor }}
+name: Admin (backend tests)
 
 on:
   pull_request:
     paths:
-      - 'api/**'
+      - 'admin/**'
     branches:
       - dev
 
 jobs:
-  tests-backend-api:
+  test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -31,4 +30,4 @@ jobs:
         run: chmod +x gradlew
 
       - name: Tests with Gradle Wrapper
-        run: ./gradlew :api:test
+        run: ./gradlew :admin:test
