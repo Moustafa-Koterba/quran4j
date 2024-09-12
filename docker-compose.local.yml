@@ -9,3 +9,13 @@ services:
       - 'MYSQL_USER=user'
     ports:
       - '3306:3306'
+  admin:
+    environment:
+      - PROFILE=local
+    ports:
+      - 8081:8081
+  api:
+    environment:
+      - PROFILE=local
+    ports:
+      - 8080:8080
