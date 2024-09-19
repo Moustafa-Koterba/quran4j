@@ -1,3 +1,5 @@
 spring:
   datasource:
-    driver-class: com.mysql.cj.jdbc.Driver
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
