@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin/quran4j.admin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/admin/quran4j.admin.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin/quran4j.admin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/admin/quran4j.admin.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/quran4j.library.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library/quran4j.library.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/quran4j.library.test.iml" filepath="$PROJECT_DIR$/.idea/modules/library/quran4j.library.test.iml" />

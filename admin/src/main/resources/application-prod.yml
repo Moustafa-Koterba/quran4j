@@ -3,3 +3,5 @@ spring:
     username: ${DATABASE_USER}
     password: ${DATABASE_PASSWORD}
     url: ${DATABASE_URL}
+    hikari:
+      maximum-pool-size: 1
